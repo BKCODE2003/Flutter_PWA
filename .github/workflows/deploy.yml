@@ -6,20 +6,24 @@ on:
       - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
-      - uses: subosito/flutter-action@v2
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
         with:
-          flutter-version: "3.19.0" # use your flutter version
+          flutter-version: '3.19.0' # This gives Dart 3.7.2
           channel: stable
 
-      - run: flutter pub get
+      - name: Install dependencies
+        run: flutter pub get
         working-directory: taskverse
 
-      - run: flutter build web --release --base-href="/taskverse/"
+      - name: Build web release
+        run: flutter build web --release --base-href="/taskverse/"
         working-directory: taskverse
 
       - name: Deploy to GitHub Pages
