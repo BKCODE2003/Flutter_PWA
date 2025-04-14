@@ -1,11 +1,7 @@
 {
     "name": "taskverse",
     "short_name": "taskverse",
-<<<<<<< HEAD
     "start_url": "/Flutter_PWA/taskverse/",
-=======
-    "start_url": ".",
->>>>>>> e0d613f48193f698be83e8ad7b580f9a50bfbae9
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
@@ -14,39 +10,23 @@
     "prefer_related_applications": false,
     "icons": [
         {
-<<<<<<< HEAD
             "src": "/Flutter_PWA/taskverse/icons/Icon-192.png",
-=======
-            "src": "icons/Icon-192.png",
->>>>>>> e0d613f48193f698be83e8ad7b580f9a50bfbae9
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-<<<<<<< HEAD
             "src": "/Flutter_PWA/taskverse/icons/Icon-512.png",
-=======
-            "src": "icons/Icon-512.png",
->>>>>>> e0d613f48193f698be83e8ad7b580f9a50bfbae9
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-<<<<<<< HEAD
             "src": "/Flutter_PWA/taskverse/icons/Icon-maskable-192.png",
-=======
-            "src": "icons/Icon-maskable-192.png",
->>>>>>> e0d613f48193f698be83e8ad7b580f9a50bfbae9
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-<<<<<<< HEAD
             "src": "/Flutter_PWA/taskverse/icons/Icon-maskable-512.png",
-=======
-            "src": "icons/Icon-maskable-512.png",
->>>>>>> e0d613f48193f698be83e8ad7b580f9a50bfbae9
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
