@@ -115,6 +115,7 @@
   <!-- Service Worker Registration Script -->
   <script>
     if ('serviceWorker' in navigator) {
+<<<<<<< HEAD
       navigator.serviceWorker.register('/Flutter_PWA/taskverse/service-worker.js')
         .then((registration) => {
           console.log('Service Worker registered with scope:', registration.scope);
@@ -125,5 +126,18 @@
     }
   </script>
   
+=======
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then((registration) => {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch((error) => {
+            console.log('Service Worker registration failed:', error);
+          });
+      });
+    }
+  </script>
+>>>>>>> e0d613f48193f698be83e8ad7b580f9a50bfbae9
 
 </body></html>

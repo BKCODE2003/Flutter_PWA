@@ -1,5 +1,6 @@
 const CACHE_NAME = 'taskverse-cache-v1';
 const urlsToCache = [
+<<<<<<< HEAD
   '/Flutter_PWA/taskverse/',
   '/Flutter_PWA/taskverse/index.html',
   '/Flutter_PWA/taskverse/manifest.json',
@@ -13,6 +14,21 @@ const urlsToCache = [
   '/Flutter_PWA/taskverse/icons/Icon-512.png',
   '/Flutter_PWA/taskverse/icons/Icon-maskable-192.png',
   '/Flutter_PWA/taskverse/icons/Icon-maskable-512.png',
+=======
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/favicon.png',
+  '/flutter_bootstrap.js',
+  '/splash/img/light-1x.png',
+  '/splash/img/light-2x.png',
+  '/splash/img/dark-1x.png',
+  '/splash/img/dark-2x.png',
+  '/icons/Icon-192.png',
+  '/icons/Icon-512.png',
+  '/icons/Icon-maskable-192.png',
+  '/icons/Icon-maskable-512.png',
+>>>>>>> e0d613f48193f698be83e8ad7b580f9a50bfbae9
   // Add other resources that are critical to load when offline
 ];
 
@@ -49,6 +65,7 @@ self.addEventListener('activate', (event) => {
   self.clients.claim(); // Take control immediately
 });
 
+<<<<<<< HEAD
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
@@ -80,6 +97,41 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+=======
+
+self.addEventListener('fetch', (event) => {
+    event.respondWith(
+      caches.match(event.request).then((cachedResponse) => {
+        if (cachedResponse) {
+          console.log(`Service Worker: Serving from cache - ${event.request.url}`);
+          return cachedResponse;
+        }
+  
+        return fetch(event.request)
+          .then((networkResponse) => {
+            // Only cache valid GET responses
+            if (
+              networkResponse &&
+              networkResponse.status === 200 &&
+              event.request.method === 'GET'
+            ) {
+              const responseClone = networkResponse.clone(); // 👈 Clone before reading
+              caches.open(CACHE_NAME).then((cache) => {
+                cache.put(event.request, responseClone);
+              });
+            }
+  
+            return networkResponse;
+          })
+          .catch((error) => {
+            console.error(`Service Worker: Fetch failed - ${event.request.url}`, error);
+            return caches.match('/offline.html');
+          });
+      })
+    );
+});
+  
+>>>>>>> e0d613f48193f698be83e8ad7b580f9a50bfbae9
 
 // Background Sync event
 self.addEventListener('sync', (event) => {
@@ -105,8 +157,13 @@ self.addEventListener('push', (event) => {
   const title = data.title || 'Taskverse Notification';
   const options = {
     body: data.body || 'You have a new task update.',
+<<<<<<< HEAD
     icon: '/Flutter_PWA/taskverse/icons/Icon-192.png',
     badge: '/Flutter_PWA/taskverse/icons/Icon-192.png',
+=======
+    icon: '/icons/Icon-192.png',
+    badge: '/icons/Icon-192.png',
+>>>>>>> e0d613f48193f698be83e8ad7b580f9a50bfbae9
   };
 
   event.waitUntil(self.registration.showNotification(title, options));
