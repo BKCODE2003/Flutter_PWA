@@ -1,0 +1,18 @@
+{
+  "app_name": "TaskVerse",
+  "home": "Home",
+  "groups": "Groups",
+  "profile": "Profile",
+  "appTitle": "TaskVerse",
+  "settings": "Settings",
+  "theme": "Theme",
+  "language": "Language",
+  "darkMode": "Dark Mode",
+  "lightMode": "Light Mode",
+  "systemDefault": "System Default",
+  "appVersion": "App Version",
+  "name": "Name",
+  "email": "Email",
+  "logout": "Logout",
+  "logoutSuccess": "Logged out successfully"
+}

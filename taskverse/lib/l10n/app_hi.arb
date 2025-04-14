@@ -1,0 +1,18 @@
+{
+  "app_name": "टास्कवर्स",
+  "home": "होम",
+  "groups": "समूह",
+  "profile": "प्रोफ़ाइल",
+  "appTitle": "टास्कवर्स",
+  "settings": "सेटिंग्स",
+  "theme": "थीम",
+  "language": "भाषा",
+  "darkMode": "डार्क मोड",
+  "lightMode": "लाइट मोड",
+  "systemDefault": "सिस्टम डिफ़ॉल्ट",
+  "appVersion": "ऐप संस्करण",
+  "name": "नाम",
+  "email": "ईमेल",
+  "logout": "लॉग आउट",
+  "logoutSuccess": "सफलतापूर्वक लॉग आउट किया गया"
+}
